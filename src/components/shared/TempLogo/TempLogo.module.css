@@ -1,0 +1,22 @@
+.logoDiv {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    margin-bottom: 20px;
+  }
+  
+  .logo {
+    width: 75px; 
+    height: 75px; 
+    background-color: black;
+    border-radius: 12px; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+  }
+  
+  .logo h1 {
+    color: white;
+    font-size: 2rem; 
+    margin: 0; 
+  }

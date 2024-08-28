@@ -1,0 +1,20 @@
+.submitButton {
+    margin-top: 40px;
+    background: linear-gradient(to right, #4BA1E8, #C624B2);
+    width: 80%;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 100px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bolder;
+  }
+  
+  .submitButton:hover {
+    background: linear-gradient(to right, #6da7f4, #d71fbe);
+  }
+  
+  .submitButton:disabled {
+    background: #CCCCCC;
+  }

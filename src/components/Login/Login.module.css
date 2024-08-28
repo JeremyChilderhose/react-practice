@@ -1,0 +1,36 @@
+.LoginWrapper {
+  display: flex;
+  justify-content: center; 
+  align-items: center;     
+  height: 100vh;          
+  background-color: #f0f0f0; 
+}
+
+.loginBox {
+  width: 350px;            
+  padding: 40px;
+  background-color: white;
+  border-radius: 8px;
+  text-align: center;
+  overflow: hidden; 
+}
+
+h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.signupContainer {
+  margin-top: 1.5rem;
+}
+
+.signupContainer p {
+  font-size: 1rem;
+  color: #333;
+  margin-top: 40px;
+}
+
+.signupContainer p {
+  margin-bottom: 0px;
+}
