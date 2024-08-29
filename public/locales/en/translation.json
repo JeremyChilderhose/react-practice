@@ -25,6 +25,16 @@
     "emailFieldAriaLabel": "Email Field",
     "backToLoginButton": "Back to login",
     "backToLoginButtonAriaLabel": "Go back to login button"
+  },
+  "registration": {
+    "registrationTitle": "Register",
+    "enterEmail": "Enter Email",
+    "enterUsername": "Enter Username",
+    "enterPassword": "Enter Password",
+    "reenterPassword": "Re-enter Password",
+    "confirmPasswordAriaLabel": "Confirm Password Field",
+    "registerButton": "Register",
+    "registerButtonAriaLabel": "Register Button"
   }
 }
   

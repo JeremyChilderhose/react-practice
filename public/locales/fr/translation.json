@@ -25,5 +25,15 @@
     "emailFieldAriaLabel": "Champ de l'email",
     "backToLoginButton": "Retour à la connexion",
     "backToLoginButtonAriaLabel": "Retourner au bouton de connexion"
+  },
+  "registration": {
+    "registrationTitle": "S'inscrire",
+    "enterEmail": "Entrez votre email",
+    "enterUsername": "Entrez votre nom d'utilisateur",
+    "enterPassword": "Entrez votre mot de passe",
+    "reenterPassword": "Ressaisissez votre mot de passe",
+    "confirmPasswordAriaLabel": "Champ de confirmation du mot de passe",
+    "registerButton": "S'inscrire",
+    "registerButtonAriaLabel": "Bouton S'inscrire"
   }
 }
