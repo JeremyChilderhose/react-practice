@@ -28,7 +28,7 @@ const InputField = ({
                     <input 
                         aria-label={fieldAriaLabel}
                         name={fieldAriaLabel}
-                        type="text"
+                        type={inputFieldType === 'email' ? 'email' : 'text'}
                         value={value}
                         onChange={(e) => onChangeFunction(e.target.value)}
                         required
