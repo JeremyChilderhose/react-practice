@@ -5,6 +5,7 @@ import styles from './SubmitButton.module.css';
 const SubmitButton = ({
     isDisabled = false,   
     buttonText = 'Submit', 
+    buttonAriaLabel = 'Submit Button',
     submitFunction = () => {}, 
   }) => {
     return (
@@ -12,7 +13,7 @@ const SubmitButton = ({
             type="submit" 
             className={styles.submitButton} 
             disabled={isDisabled} 
-            aria-label={buttonText + " button"}
+            aria-label={buttonAriaLabel}
             onClick={submitFunction} 
         >
             {buttonText}
@@ -22,7 +23,8 @@ const SubmitButton = ({
 
 SubmitButton.propTypes = {
     isDisabled: PropTypes.bool,   
-    buttonText: PropTypes.string,  
+    buttonText: PropTypes.string,
+    buttonAriaLabel: PropTypes.string,  
     submitFunction: PropTypes.func 
 };
 
