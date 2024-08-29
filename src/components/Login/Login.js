@@ -6,8 +6,10 @@ import InputField from '../shared/InputField/InputField';
 import SubmitButton from '../shared/SubmitButton/SubmitButton';
 import TextButton from '../shared/TextButton/TextButton';
 import TempLogo from '../shared/TempLogo/TempLogo';
+import { useTranslation } from 'react-i18next'; 
 
 const Login = () => {
+  const { t } = useTranslation(); 
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [isPasswordHidden, setIsPasswordHidden] = useState(true);
@@ -33,9 +35,8 @@ const Login = () => {
     navigate('/resetPassword');
   };
 
-  // Customize content based on the variant
   const variantContent = !variant ? (
-    <h2>Welcome to the Default Login Page</h2>
+    <h2>{t('login.welcomeMessage')}</h2>
   ) : variant === 'a' ? (
     <h2>Welcome to Variant A</h2>
   ) : (
@@ -53,8 +54,9 @@ const Login = () => {
               inputFieldType="username"
               value={username}
               onChangeFunction={setUsername}
-              placeholder="Username"
-              ariaLabel="Username Field"
+              placeholder={t('login.usernamePlaceholder')}
+              fieldAriaLabel={t('login.usernameAriaLabel')}
+              iconLabel={t('login.profileIconLabel')}
           />
 
           <InputField 
@@ -63,31 +65,34 @@ const Login = () => {
               value={password}
               onChangeFunction={setPassword}
               onClickFunction={clickHidePassword}
-              placeholder="Password"
-              ariaLabel="Password Field"
+              placeholder={t('login.passwordPlaceholder')}
+              fieldAriaLabel={t('login.passwordAriaLabel')}
+              buttonAriaLabel={t('login.visibilityToggleAriaLabel')}
+              iconLabel={t('login.lockIconLabel')}
           />
 
           <TextButton
               textButtonType="forgotPassword" 
               onClickFunction={clickForgotPassword} 
-              ariaLabel="Forgot Password Button" 
-              textContent="Forgot Password?" 
+              ariaLabel={t('login.forgotPasswordButtonAriaLabel')}
+              textContent={t('login.forgotPasswordButton')}
           />
 
           <SubmitButton 
             isDisabled={password === '' || username === ''} 
-            buttonText="Login" 
+            buttonText={t('login.loginButton')}
+            buttonAriaLabel={t('login.loginButtonAriaLabel')}
             submitFunction={clickLogin} 
           />
         </form>
 
         <div className={styles.signupContainer}>
-          <p>Don't have an account?</p>
+          <p>{t('login.signupText')}</p>
           <TextButton
               textButtonType="signup" 
               onClickFunction={clickSignup} 
-              ariaLabel="Signup Button" 
-              textContent="SIGNUP" 
+              ariaLabel={t('login.signupButtonAriaLabel')}
+              textContent={t('login.signupButton')}
           />
         </div>
 

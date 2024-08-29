@@ -1,11 +1,15 @@
 {
   "login": {
     "welcomeMessage": "Bienvenue",
+    "profileIconLabel": "Icône de profil",
+    "emailIconLabel": "Icône de l'email",
+    "lockIconLabel": "Icône de verrou",
     "usernamePlaceholder": "Nom d'utilisateur",
     "usernameAriaLabel": "Champ du nom d'utilisateur",
     "passwordPlaceholder": "Mot de passe",
     "passwordAriaLabel": "Champ du mot de passe",
-    "loginButton": "Se connecter",
+    "visibilityToggleAriaLabel": "Bouton de bascule de visibilité",
+    "loginButton": "Connexion",
     "loginButtonAriaLabel": "Bouton de connexion",
     "forgotPasswordButton": "Mot de passe oublié ?",
     "forgotPasswordButtonAriaLabel": "Bouton Mot de passe oublié",

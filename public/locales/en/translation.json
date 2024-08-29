@@ -1,10 +1,14 @@
 {
   "login": {
     "welcomeMessage": "Welcome",
+    "profileIconLabel": "Profile Icon",
+    "emailIconLabel": "Email Icon",
+    "lockIconLabel": "Lock Icon",
     "usernamePlaceholder": "Username",
     "usernameAriaLabel": "Username Field",
     "passwordPlaceholder": "Password",
     "passwordAriaLabel": "Password Field",
+    "visibilityToggleAriaLabel": "Visibility Toggle Button",
     "loginButton": "Login",
     "loginButtonAriaLabel": "Login Button",
     "forgotPasswordButton": "Forgot Password?",
