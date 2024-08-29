@@ -1,0 +1,16 @@
+{
+  "login": {
+    "welcomeMessage": "Bienvenue",
+    "usernamePlaceholder": "Nom d'utilisateur",
+    "usernameAriaLabel": "Champ du nom d'utilisateur",
+    "passwordPlaceholder": "Mot de passe",
+    "passwordAriaLabel": "Champ du mot de passe",
+    "loginButton": "Se connecter",
+    "loginButtonAriaLabel": "Bouton de connexion",
+    "forgotPasswordButton": "Mot de passe oublié ?",
+    "forgotPasswordButtonAriaLabel": "Bouton Mot de passe oublié",
+    "signupText": "Vous n'avez pas de compte ?",
+    "signupButton": "S'inscrire",
+    "signupButtonAriaLabel": "Bouton S'inscrire"
+  }
+}

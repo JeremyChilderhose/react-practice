@@ -1,0 +1,17 @@
+{
+  "login": {
+    "welcomeMessage": "Welcome",
+    "usernamePlaceholder": "Username",
+    "usernameAriaLabel": "Username Field",
+    "passwordPlaceholder": "Password",
+    "passwordAriaLabel": "Password Field",
+    "loginButton": "Login",
+    "loginButtonAriaLabel": "Login Button",
+    "forgotPasswordButton": "Forgot Password?",
+    "forgotPasswordButtonAriaLabel": "Forgot Password Button",
+    "signupText": "Don't have an account?",
+    "signupButton": "Signup",
+    "signupButtonAriaLabel": "Signup Button"
+  }
+}
+  
