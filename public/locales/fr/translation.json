@@ -16,5 +16,14 @@
     "signupText": "Vous n'avez pas de compte ?",
     "signupButton": "S'inscrire",
     "signupButtonAriaLabel": "Bouton S'inscrire"
+  },
+  "passwordReset": {
+    "forgotPassword": "Mot de passe oublié ?",
+    "passwordResetButton": "Réinitialiser",
+    "passwordResetButtonArialLabel": "Bouton Réinitialiser le mot de passe",
+    "emailPlaceholder": "Entrez votre email",
+    "emailFieldAriaLabel": "Champ de l'email",
+    "backToLoginButton": "Retour à la connexion",
+    "backToLoginButtonAriaLabel": "Retourner au bouton de connexion"
   }
 }

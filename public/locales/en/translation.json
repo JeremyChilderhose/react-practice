@@ -16,6 +16,15 @@
     "signupText": "Don't have an account?",
     "signupButton": "Signup",
     "signupButtonAriaLabel": "Signup Button"
+  },
+  "passwordReset": {
+    "forgotPassword": "Forgot password?",
+    "passwordResetButton": "Reset",
+    "passwordResetButtonArialLabel": "Reset Password Button",
+    "emailPlaceholder": "Enter your email",
+    "emailFieldAriaLabel": "Email Field",
+    "backToLoginButton": "Back to login",
+    "backToLoginButtonAriaLabel": "Go back to login button"
   }
 }
   
