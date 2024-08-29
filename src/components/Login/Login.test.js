@@ -3,6 +3,12 @@ import { render, fireEvent, screen } from '@testing-library/react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import Login from './Login';
 
+jest.mock('react-i18next', () => ({
+  useTranslation: () => ({
+    t: (key) => key,
+  }),
+}));
+
 const mockNavigate = jest.fn();
 jest.mock('react-router-dom', () => ({
   ...jest.requireActual('react-router-dom'),
@@ -18,11 +24,13 @@ describe('Login Component', () => {
     );
 
     // Check if the form inputs, buttons, and icons are rendered
-    expect(screen.getByPlaceholderText(/Username/i)).toBeInTheDocument();
-    expect(screen.getByPlaceholderText(/Password/i)).toBeInTheDocument();
-    expect(screen.getByRole('button', { name: /login/i })).toBeInTheDocument();
-    expect(screen.getByText(/forgot password\?/i)).toBeInTheDocument();
-    expect(screen.getByText(/sign up/i)).toBeInTheDocument();
+    expect(screen.getByPlaceholderText(/login.usernamePlaceholder/i)).toBeInTheDocument();
+    expect(screen.getByPlaceholderText(/login.passwordPlaceholder/i)).toBeInTheDocument();
+    
+    // Adjusted to match the exact button text
+    expect(screen.getByRole('button', { name: /login.loginButton/i })).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: /login.forgotPasswordButton/i })).toBeInTheDocument();
+    expect(screen.getByText(/login.signupText/i)).toBeInTheDocument();
   });
 
   it('allows user to type in username and password', () => {
@@ -32,8 +40,8 @@ describe('Login Component', () => {
       </Router>
     );
 
-    const usernameInput = screen.getByPlaceholderText(/Username/i);
-    const passwordInput = screen.getByPlaceholderText(/Password/i);
+    const usernameInput = screen.getByPlaceholderText(/login.usernamePlaceholder/i);
+    const passwordInput = screen.getByPlaceholderText(/login.passwordPlaceholder/i);
 
     fireEvent.change(usernameInput, { target: { value: 'testuser' } });
     fireEvent.change(passwordInput, { target: { value: 'password123' } });
@@ -49,12 +57,12 @@ describe('Login Component', () => {
       </Router>
     );
 
-    const loginButton = screen.getByRole('button', { name: /login/i });
+    const loginButton = screen.getByRole('button', { name: /login.loginButton/i });
 
     expect(loginButton).toBeDisabled(); // Initial state
 
-    const usernameInput = screen.getByPlaceholderText(/Username/i);
-    const passwordInput = screen.getByPlaceholderText(/Password/i);
+    const usernameInput = screen.getByPlaceholderText(/login.usernamePlaceholder/i);
+    const passwordInput = screen.getByPlaceholderText(/login.passwordPlaceholder/i);
 
     // Simulate typing only username
     fireEvent.change(usernameInput, { target: { value: 'testuser' } });
@@ -72,21 +80,20 @@ describe('Login Component', () => {
       </Router>
     );
 
-    const passwordInput = screen.getByPlaceholderText(/Password/i);
-    const eyeButton = screen.getByLabelText(/Show Password/i); // Updated query to use accessible label
+    const passwordInput = screen.getByPlaceholderText(/login.passwordPlaceholder/i);
+    const visibilityButton = screen.getByLabelText(/login.visibilityToggleAriaLabel/i);
 
     // Initial state should be password hidden
     expect(passwordInput.type).toBe('password');
 
-    // Click the eye button to show password
-    fireEvent.click(eyeButton);
+    // Click the button to show password
+    fireEvent.click(visibilityButton);
     expect(passwordInput.type).toBe('text');
 
-    // Ensure the button label changes accordingly
-    expect(screen.getByLabelText(/Hide Password/i)).toBeInTheDocument();
+    expect(screen.getByLabelText(/login.visibilityToggleAriaLabel/i)).toBeInTheDocument();
 
     // Click again to hide password
-    fireEvent.click(screen.getByLabelText(/Hide Password/i));
+    fireEvent.click(screen.getByLabelText(/login.visibilityToggleAriaLabel/i));
     expect(passwordInput.type).toBe('password');
   });
 
@@ -97,7 +104,7 @@ describe('Login Component', () => {
       </Router>
     );
 
-    const signupButton = screen.getByText(/sign up/i);
+    const signupButton = screen.getByRole('button', { name: /login.signupButton/i });
 
     // Simulate clicking the signup button
     fireEvent.click(signupButton);
@@ -112,7 +119,7 @@ describe('Login Component', () => {
       </Router>
     );
 
-    const loginButton = screen.getByRole('button', { name: /login/i });
+    const loginButton = screen.getByRole('button', { name: /login.loginButton/i });
 
     // Click the login button without filling the form
     fireEvent.click(loginButton);
