@@ -1,3 +1,4 @@
+from re import fullmatch
 from hashlib import sha256
 import json
 from sqlalchemy import create_engine
@@ -50,6 +51,11 @@ def hash_password(password: str) -> str:
     hasher = sha256()
     hasher.update(password.encode('utf-8'))
     return hasher.hexdigest()
+
+def is_password_hashed(password: str) -> bool:
+    if len(password) == 64 and fullmatch(r'[a-fA-F0-9]{64}', password):
+        return True
+    return False
 
 def _create_tables(engine, connection):
     tables_to_check = ['users', 'tweets', 'user_tweet_like']
