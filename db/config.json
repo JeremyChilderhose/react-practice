@@ -1,0 +1,10 @@
+{
+    "databases": {
+        "dev": {
+            "url": "sqlite:///dev.db"
+        },
+        "test": {
+            "url": "sqlite:///test.db"
+        }
+    }
+}
