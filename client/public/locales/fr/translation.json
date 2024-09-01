@@ -20,7 +20,7 @@
   "passwordReset": {
     "forgotPassword": "Mot de passe oublié ?",
     "passwordResetButton": "Réinitialiser",
-    "passwordResetButtonArialLabel": "Bouton Réinitialiser le mot de passe",
+    "passwordResetButtonAriaLabel": "Bouton Réinitialiser le mot de passe",
     "emailPlaceholder": "Entrez votre email",
     "emailFieldAriaLabel": "Champ de l'email",
     "backToLoginButton": "Retour à la connexion",
@@ -34,6 +34,11 @@
     "reenterPassword": "Ressaisissez votre mot de passe",
     "confirmPasswordAriaLabel": "Champ de confirmation du mot de passe",
     "registerButton": "S'inscrire",
-    "registerButtonAriaLabel": "Bouton S'inscrire"
+    "registerButtonAriaLabel": "Bouton S'inscrire",
+    "errorMustHaveValidEmail": "Doit être un email valide du format *****@****.***",
+    "errorUsernameTaken": "Ce nom d'utilisateur est déjà pris.",
+    "errorUsernameTooLong": "Les noms d'utilisateur valides sont composés de 1 à 12 caractères alphanumériques.",
+    "errorPasswordEmpty": "Le mot de passe ne peut pas être vide.",
+    "errorPasswordDoesNotMatch": "Les mots de passe ne correspondent pas."
   }
 }

@@ -34,7 +34,12 @@
     "reenterPassword": "Re-enter Password",
     "confirmPasswordAriaLabel": "Confirm Password Field",
     "registerButton": "Register",
-    "registerButtonAriaLabel": "Register Button"
+    "registerButtonAriaLabel": "Register Button",
+    "errorMustHaveValidEmail": "Must be valid email of form *****@****.***",
+    "errorUsernameTaken": "This username is taken.",
+    "errorUsernameTooLong": "Valid usernames are between 1 and 12 alphanumeric characters.",
+    "errorPasswordEmpty": "Password cannot be empty.",
+    "errorPasswordDoesNotMatch": "Passwords do not match."
   }
 }
   
