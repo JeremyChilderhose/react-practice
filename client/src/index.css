@@ -17,3 +17,8 @@ body {
   align-items: center;     
   height: 100vh;           
 }
+
+.smallErrorText {
+  color: red;
+  font-size: small;
+}
