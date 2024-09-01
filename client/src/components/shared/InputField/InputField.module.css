@@ -1,64 +1,67 @@
 .inputContainer {
-    margin-bottom: 1rem;
-    position: relative; /* Ensure relative positioning for the inputWrapper */
-  }
-  
-  .inputWrapper {
-    position: relative;
-  }
-  
-  .inputWrapper .icon,
-  .inputWrapper .eyeIcon {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    display: block;
-  }
-  
-  .eyeIcon:hover {
-    color: black; 
-  }
-  
-  .inputWrapper .icon {
-    left: 10px; 
-    width: 20px; 
-    height: 20px; 
-  }
-  
-  .inputWrapper .eyeIcon {
-    right: 10px; 
-    width: 20px; 
-    height: 20px; 
-  }
-  
-  .inputWrapper input {
-    width: 100%;
-    padding: 0.75rem 2.5rem 0.75rem 2.5rem; 
-    border: none; 
-    border-bottom: 3px solid #ddd; 
-    font-size: 1rem;
-    color: #333;
-    outline: none;
-    box-sizing: border-box; 
-  }
-  
-  .inputWrapper input:focus {
-    border: none; 
-    border-bottom: 3px solid transparent; 
-    border-image: linear-gradient(to right, #4BA1E8, #C624B2) 1;
-  }
-  
-  .eyeButton {
-    background: none; 
-    border: none; 
-    padding: 0; 
-    cursor: pointer; 
-    display: inline-flex; 
-    align-items: center; 
-    justify-content: center; 
-  }
-  
-  .eyeButton:focus {
-    outline: none; 
-  }
-  
+  margin-bottom: 1rem;
+  position: relative; 
+}
+
+.inputWrapper {
+  position: relative;
+}
+
+.inputWrapper .icon,
+.inputWrapper .eyeIcon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: block;
+}
+
+.eyeIcon:hover {
+  color: black; 
+}
+
+.inputWrapper .icon {
+  left: 10px; 
+  width: 20px; 
+  height: 20px; 
+}
+
+.inputWrapper .eyeIcon {
+  right: 10px; 
+  width: 20px; 
+  height: 20px; 
+}
+
+.inputWrapper input {
+  width: 100%;
+  padding: 0.75rem 2.5rem 0.75rem 2.5rem; 
+  border: none; 
+  border-bottom: 3px solid #ddd; 
+  font-size: 1rem;
+  color: #333;
+  outline: none;
+  box-sizing: border-box; 
+}
+
+.inputWrapper input:focus {
+  border: none; 
+  border-bottom: 3px solid transparent; 
+  border-image: linear-gradient(to right, #4BA1E8, #C624B2) 1;
+}
+
+.inputWrapper.error input {
+  border-bottom: 3px solid red; 
+}
+
+.eyeButton {
+  background: none; 
+  border: none; 
+  padding: 0; 
+  cursor: pointer; 
+  display: inline-flex; 
+  align-items: center; 
+  justify-content: center; 
+}
+
+.eyeButton:focus {
+  outline: none; 
+}
