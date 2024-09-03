@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import styles from './Login.module.css';
 import { useNavigate, useParams } from "react-router-dom";
@@ -7,6 +7,7 @@ import SubmitButton from '../shared/SubmitButton/SubmitButton';
 import TextButton from '../shared/TextButton/TextButton';
 import TempLogo from '../shared/TempLogo/TempLogo';
 import { useTranslation } from 'react-i18next'; 
+import authService from '../../services/authService';
 
 const Login = () => {
   const { t } = useTranslation(); 
@@ -16,12 +17,23 @@ const Login = () => {
   const navigate = useNavigate();
   const { variant } = useParams(); 
 
-  const clickLogin = (e) => {
+  useEffect(() => {
+    const checkAuth = async () => {
+      const isAuthenticated = await authService.isAuthenticated();
+      if (isAuthenticated) {
+        navigate('/profile');
+      }
+    };
+    
+    checkAuth();
+  }, [navigate]);
+
+  const clickLogin = async (e) => {
     e.preventDefault();
-    console.log("Handling Login");
-    console.log("Username: " + username);
-    console.log("Password: " + password);
-  };
+    if ( await authService.login(username, password)) {
+      navigate('/profile')
+    }
+};
 
   const clickHidePassword = () => {
     setIsPasswordHidden(!isPasswordHidden);

@@ -21,7 +21,7 @@ const InputField = ({
     iconLabel = 'Icon Label'
 }) => {
     const handleBlur = () => {
-        validateFunction(); // Call validateFunction on blur
+        validateFunction(); 
     };
 
     return (
@@ -36,7 +36,7 @@ const InputField = ({
                             name={fieldAriaLabel}
                             type={inputFieldType === 'email' ? 'email' : 'text'}
                             value={value}
-                            onBlur={handleBlur} // Use handleBlur here
+                            onBlur={handleBlur}
                             onChange={(e) => onChangeFunction(e.target.value)}
                             required
                             placeholder={placeholder}
@@ -52,7 +52,7 @@ const InputField = ({
                         type={isPasswordHidden ? "password" : "text"}
                         name={fieldAriaLabel}
                         value={value}
-                        onBlur={handleBlur} // Use handleBlur here
+                        onBlur={handleBlur} 
                         onChange={(e) => onChangeFunction(e.target.value)}  
                         required
                         placeholder={placeholder}  
@@ -80,7 +80,7 @@ InputField.propTypes = {
     isPasswordHidden: PropTypes.bool,    
     value: PropTypes.string,             
     hasError: PropTypes.bool, 
-    validateFunction: PropTypes.func,  // Updated PropTypes
+    validateFunction: PropTypes.func,  
     onChangeFunction: PropTypes.func.isRequired, 
     onClickFunction: PropTypes.func,   
     placeholder: PropTypes.string,       
