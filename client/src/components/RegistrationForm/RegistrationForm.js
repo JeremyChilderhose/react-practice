@@ -27,7 +27,6 @@ const RegistrationForm = () => {
     try {
       const hashedPassword = SHA256(password).toString();
       const result = await apiService.registerUser(username, email, hashedPassword);
-      console.log(result);
       navigate('/login')
     } catch (error) {
       if (error.response && error.response.data && error.response.data.detail) {
