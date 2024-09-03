@@ -91,3 +91,13 @@ def decrement_likes(db: Session, tweet_id: int):
     except SQLAlchemyError as e:
         db.rollback()
         raise Exception(f"Database error: {e}")
+
+def get_all_tweets(db: Session):
+    try:
+        tweets = db.query(Tweet).all()
+        if not tweets:
+            raise ValueError("No tweets found.")
+        return tweets
+    except SQLAlchemyError as e:
+        db.rollback()
+        raise Exception(f"Database error: {e}")

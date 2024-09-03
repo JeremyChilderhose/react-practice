@@ -4,6 +4,7 @@ from typing import List
 from server.dependencies import get_db
 from server.crud.tweet_crud import (
     create_tweet,
+    get_all_tweets,
     get_tweet_by_id,
     get_tweets_by_user,
     delete_tweet,
@@ -56,5 +57,15 @@ def update_tweet(tweet_id: int, new_content: str, db: Session = Depends(get_db))
         return tweet
     except ValueError as ve:
         raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail=str(ve))
+    except Exception as e:
+        raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail=str(e))
+
+@router.get("/tweets/", response_model=List[TweetResponse])
+def read_all_tweets(db: Session = Depends(get_db)):
+    try:
+        tweets = get_all_tweets(db=db)
+        return tweets
+    except ValueError as ve:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=str(ve))
     except Exception as e:
         raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail=str(e))
