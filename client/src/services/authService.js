@@ -40,7 +40,6 @@ class AuthService {
             return true
           } catch (error) {
             console.error("There was an error during login:", error);
-            alert("Login failed. Please check your credentials and try again.");
             return false
           }
     }
