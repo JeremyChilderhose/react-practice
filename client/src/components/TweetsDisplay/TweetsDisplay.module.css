@@ -1,0 +1,74 @@
+.tweetDisplay {
+    background-color: rgba(255, 255, 255, 0.5); 
+    border-radius: 12px;
+    padding: 20px; 
+    margin: 20px auto; 
+    width: 95%; 
+    max-width: 1000px; 
+    max-height: 630px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    overflow-y: auto; 
+    padding-bottom: 20px; 
+    padding-right: 12px;
+    scrollbar-width: thin; 
+    scrollbar-color: transparent transparent; 
+  }
+  
+  .tweetDisplay::after {
+    border-radius: 12px;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 20px;
+    left: 0;
+    width: 100%;
+    height: 100px; 
+    background: linear-gradient(to bottom, rgba(173, 173, 173, 0), rgba(255, 255, 255, 1));
+    pointer-events: none; 
+  }
+
+  .tweetDisplay > *:not(:last-child) {
+    margin-bottom: 20px; 
+  }
+  
+  .tweetDisplay > * {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInMoveUp 1s ease-out forwards;
+  }
+  
+  .tweetDisplay > *:nth-child(1) {
+    animation-delay: 0.2s; 
+  }
+  
+  .tweetDisplay > *:nth-child(2) {
+    animation-delay: 0.4s; 
+  }
+  
+  .tweetDisplay > *:nth-child(3) {
+    animation-delay: 0.6s; 
+  }
+
+  .tweetDisplay > *:nth-child(4) {
+    animation-delay: 0.8s; 
+  }
+
+  .tweetDisplay > *:nth-child(5) {
+    animation-delay: 1s; 
+  }
+
+  .tweetDisplay > *:nth-child(6) {
+    animation-delay: 1.2s; 
+  }
+  
+  @keyframes fadeInMoveUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px); 
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0); 
+    }
+  }
+  
