@@ -1,7 +1,7 @@
 import os 
 from fastapi import FastAPI
 from db.initialize_db import setup_db
-from server.routes import users, tweets
+from server.routes import users, tweets, auth
 from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
@@ -23,3 +23,4 @@ engine = setup_db('dev')
 
 app.include_router(users.router)
 app.include_router(tweets.router)
+app.include_router(auth.router)
