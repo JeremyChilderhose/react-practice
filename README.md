@@ -4,6 +4,8 @@ NOTE: Requirements & Installation Guide are incomplete.
 
 This is a simple microblogging demo application built with Python, FastAPI, SQLite using SQLAlchemy, React, and JavaScript. The application allows users to post messages and view posts. The project is structured into three main directories: `client`, `db`, and `server`.
 
+You can find the figma designs here: https://www.figma.com/design/5ip0qwHZIgW3zLuqwsQD19/Twitter-Clone?node-id=63-76&t=vCZt0hixyuq14BG7-1
+
 ## Table of Contents
 
 - [Features](#features)
