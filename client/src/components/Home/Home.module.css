@@ -1,0 +1,21 @@
+.homeDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0; 
+    transform: translateY(20px); 
+    animation: fadeInMoveUp 1s ease-out forwards;
+    margin-left: 200px;
+  }
+  
+  @keyframes fadeInMoveUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px); 
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0); 
+    }
+  }
+  
