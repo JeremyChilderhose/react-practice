@@ -1,22 +1,38 @@
 .logoDiv {
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    margin-bottom: 20px;
-  }
-  
-  .logo {
-    width: 75px; 
-    height: 75px; 
-    background-color: black;
-    border-radius: 12px; 
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-  }
-  
-  .logo h1 {
-    color: white;
-    font-size: 2rem; 
-    margin: 0; 
-  }
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  margin-bottom: 20px;
+}
+
+.logo {
+  width: 75px; 
+  height: 75px; 
+  background-color: black;
+  border-radius: 12px; 
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+}
+
+.logo h1 {
+  color: white;
+  font-size: 2rem; 
+  margin: 0; 
+}
+
+.navbarLogo { 
+  width: 90px; 
+  height: 90px; 
+  background: linear-gradient(to top, #4BA1E8, #C624B2); 
+  border-radius: 12px; 
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+}
+
+.navbarLogo h1 { 
+  color: white;
+  font-size: 3rem; 
+  margin: 0; 
+}
