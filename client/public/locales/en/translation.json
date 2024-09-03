@@ -1,6 +1,7 @@
 {
   "login": {
     "welcomeMessage": "Welcome",
+    "loginFormName": "Login Form",
     "profileIconLabel": "Profile Icon",
     "emailIconLabel": "Email Icon",
     "lockIconLabel": "Lock Icon",
@@ -40,6 +41,20 @@
     "errorUsernameTooLong": "Valid usernames are between 1 and 12 alphanumeric characters.",
     "errorPasswordEmpty": "Password cannot be empty.",
     "errorPasswordDoesNotMatch": "Passwords do not match."
+  },
+  "navbar": {
+    "home": "Home",
+    "profile": "Profile",
+    "explore": "Explore",
+    "logout": "Logout"
+  },
+  "tweetForm": {
+    "send": "Send",
+    "contentPlaceholder": "What's happening?",
+    "textAreaName": "Tweet Form"
+  },
+  "tweet": {
+    "like": "Like"
   }
 }
   
