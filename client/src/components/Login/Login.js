@@ -13,6 +13,8 @@ const Login = () => {
   const { t } = useTranslation(); 
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [hasUsernameError, setHasUsernameError] = useState(false);
+  const [hasPasswordError, setHasPasswordError] = useState(false);
   const [isPasswordHidden, setIsPasswordHidden] = useState(true);
   const navigate = useNavigate();
   const { variant } = useParams(); 
@@ -21,8 +23,8 @@ const Login = () => {
     const checkAuth = async () => {
       const isAuthenticated = await authService.isAuthenticated();
       if (isAuthenticated) {
-        navigate('/profile');
-      }
+        navigate('/home');
+      } 
     };
     
     checkAuth();
@@ -31,7 +33,10 @@ const Login = () => {
   const clickLogin = async (e) => {
     e.preventDefault();
     if ( await authService.login(username, password)) {
-      navigate('/profile')
+      navigate('/home')
+    } else {
+      setHasUsernameError(true)
+      setHasPasswordError(true)
     }
 };
 
@@ -61,7 +66,7 @@ const Login = () => {
         {variantContent}
         <TempLogo />
         
-        <form onSubmit={clickLogin}>
+        <form onSubmit={clickLogin} name={t('login.loginFormName')}>
           <InputField 
               inputFieldType="username"
               value={username}
@@ -69,6 +74,7 @@ const Login = () => {
               placeholder={t('login.usernamePlaceholder')}
               fieldAriaLabel={t('login.usernameAriaLabel')}
               iconLabel={t('login.profileIconLabel')}
+              hasError={hasUsernameError}
           />
 
           <InputField 
@@ -81,6 +87,7 @@ const Login = () => {
               fieldAriaLabel={t('login.passwordAriaLabel')}
               buttonAriaLabel={t('login.visibilityToggleAriaLabel')}
               iconLabel={t('login.lockIconLabel')}
+              hasError={hasPasswordError}
           />
 
           <TextButton
